@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+./vendor/bin/pint
+php artisan l5-swagger:generate
+php artisan test --parallel
